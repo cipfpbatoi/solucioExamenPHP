@@ -1,27 +1,31 @@
 <?php
 namespace Examen\Controllers;
 
+use Examen\Services\Database;
+
 class ProductController {
     public function index() {
-        echo 'ProductController index';
+        $products = Database::getAll();
+        loadView('products',compact('products'));
     }
     public function show($id) {
         echo 'ProductController show ' . $id;
     }
     public function create() {
-        echo 'ProductController create';
+        loadView('create_product');
     }
-    public function store() {
-        echo 'ProductController store';
+    public function store($request) {
+        Database::store($request);
     }
     public function edit($id) {
-        echo 'ProductController edit ' . $id;
+        $product = Database::find($id);
+        loadView('update_product',compact('product'));
     }
-    public function update($id) {
-        echo 'ProductController update ' . $id;
+    public function update($id,$request) {
+        $product = Database::update($id,$request);
     }
     public function destroy($id) {
-        echo 'ProductController destroy ' . $id;
+        Database::delete($id);
     }
 
 }

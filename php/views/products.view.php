@@ -7,7 +7,6 @@
     <title>Gestió de Productes</title>
 </head>
 <body>
-<?php include_once ($_SERVER['DOCUMENT_ROOT'].'/../views/partials/menu.php') ?>
 <div class="container">
 <h1>Gestió de Productes</h1>
 
@@ -22,7 +21,9 @@
     </tr>
     </thead>
     <tbody>
-    <!-- TODO:  PHP per llistar els productes -->
+    <?php foreach ($products as $product): ?>
+        <tr><td><?=$product->id?></td><td><?=$product->nom?></td><td><?=$product->preu?></td><td><a href="delete_product.php?id=<?=$product->id?>">Esborrar</a><a href="update_product.php?id=<?=$product->id?>">Modificar</a></td></tr>
+    <?php endforeach; ?>    
     </tbody>
 </table>
 

@@ -11,7 +11,7 @@
 <h1>Afegir Producte</h1>
 
 
-<form action="index.php"  method="post">
+<form action="create_product.php"  method="post">
     <label for="nom">Nom del producte:</label>
     <input type="text" id="nom" name="nom" required>
 

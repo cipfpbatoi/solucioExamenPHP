@@ -10,12 +10,12 @@
 <div class="container">
 <h1>Editar Producte</h1>
 
-<form action="index.php" method="post">
-    <input type="hidden" name="id" value="">
+<form action="update_product.php" method="post">
+    <input type="hidden" name="id" value="<?= $product->id ?>">
     <label for="nom">Nom del producte:</label>
-    <input type="text" id="nom" name="nom" value="" required>
+    <input type="text" id="nom" name="nom" value="<?= $product->nom ?>" required>
     <label for="preu">Preu:</label>
-    <input type="number" id="preu" name="preu" value="" step="0.01" required>
+    <input type="number" id="preu" name="preu" value="<?= $product->preu ?>" step="0.01" required>
     <button type="submit">Actualitzar Producte</button>
 </form>
 
