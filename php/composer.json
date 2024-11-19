@@ -1,0 +1,23 @@
+{
+    "name": "cipfpbatoi/examen",
+    "description": "Examen 1AVAL",
+    "license" : "MIT",
+    "autoload": {
+        "psr-4": {
+            "Examen\\": "App"
+        }
+    },
+    "authors": [
+        {
+            "name": "igomis",
+            "email": "igomis@cipfpbatoi.es"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "require": {
+        "dompdf/dompdf": "^3.0",
+        "monolog/monolog": "^3.8"
+    }
+}
